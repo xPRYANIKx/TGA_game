@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://clhcn0dfpulpa"]
+
+[node name="education_location" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 392.0
+offset_top = 192.0
+offset_right = 866.0
+offset_bottom = 450.0
+text = "Ы"

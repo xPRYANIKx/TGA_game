@@ -1,0 +1,107 @@
+0. Локация для обучения, начало игры
+0.1. Белая комната -> Комната с вещами
+0.2. Улица
+
+health() = hp[3]
+armor(state.now()) = storage(hp[0])
+coin() = (lCoin[0], gCoin[0])
+
+attack.jump(state.place() == location[0]) = hp[-10]
+attack.throw_arc__default(state.place() == location[0]) = hp[-1]
+
+// ---------------------------------------------------
+
+0. Хаб-локация
+0.1. Магазин: 
+
+state.addHealth(state.place() > location[1]) = (health += hp[1] && price == lCoin[3, 5, 7])
+state.addArmor(state.place() > location[1]) = (armor(state.now()) += storage(hp[1]) && price == gCoin[10, 10, 20])
+
+
+ability(f): att.direct_throw__default(> location[1]); strong = 1/3
+attack.throw_arc__fire_boiler(state.place() > location[1]): lс = 20 || strong = 2/3 
+ability(lc = 40): att.spiral_throw__fire_boiler // strong = 2/3 + 1/3(s)
+ability(lc = 30): att.direct_throw__fire_boiler(> location[1]); strong = 1/3 + 1/3(s)
+ability(lc = 20): cap.slowdown(> location[1])[10](m = 5)
+cap.all_round_mayo_protection[10] : lс = 50 || m = 40 (> location[2]) // health = 3/3
+attExt.total__rainbow_explosion: lс = 100 || m = 60 (> location[5]) // strong = 3/3
+ability(lc = 40): attExt.small_circular__chili_explosion (m = 20) // strong = 3/3
+ability(lc = 50): att.3x_throw__fire_boiler // strong = 2/3
+ability(lc = 50): attExt.line_digital explosion (m = 30) // strong = 3/3
+ability(lc = 40): cap.maximum_strong[15](m = 30)
+ability(lc = 60): attExt.midle_circular__beer_explosion (m = 40) // strong = 3/3
+ability(lc = 70): att.direct_throw__rainbow // strong = 3/3
+ability(lc = 70): att.arc_throw__poison // strong = 2/3 + 1/3(s)
+ability(lc = 70): attExt.cross_vitamin_explosion (m = 40) // strong = 3/3
+ability(lc = 90): att.direct_throw__fast_rainbow // strong = 3/3
+ability(lc = 40): cap.immortality[10](m = 30)
+
+// ---------------------------------------------------
+
+1. Лес (lс = 9 || m = 20)
+1.1. День лес -> День озеро -> День полянка
+1.2. Ночь лес -> Ночь высокие деревья
+1.3. День высокие деревья -> День поле с ромашками -> День полянка
+Босс (Фемеенистка)
+
+// ---------------------------------------------------
+
+2. Еда/Кухня (lс = 90 || m = 40)
+
+2.1. Стол -> Холодильник
+2.2. Пицца уровень: Сырная часть -> Мясная часть -> Часть с соусами (они кипят, как лава)
+2.3. Стол -> Раковина
+Босс (Слизь из раковины) 
+
+// ---------------------------------------------------
+
+3. Компьютер (lс = 140 || m = 50)
+
+3.1. Компьютерный стол -> Монитор 
+3.2. Системный блок -> WiFi-роутер
+3.3. Компьютерные окна: Default -> Witch House / VaporWave -> Вирусы
+Босс (Криптоэнтузиаст) 
+
+// ---------------------------------------------------
+
+4. Город (lс = 140 || m = 90)
+
+4.1. Уровень с уклонением [Велосипед] (Пляж -> Частный сектор -> Городской массив)
+4.2. Супермаркет -> Офис -> Метро -> Торговый центр
+4.4. Свалка -> Стройка -> Крыши
+Босс (Вертолёт) 
+
+// ---------------------------------------------------
+
+5. Сон (lс = 190 || m = 60)
+
+5.1. Чёрно-белая зона -> Зелёная монохроиная зона -> Максимально низкополигональная зона
+5.2 Радуга -> Персидский ковёр -> Цирк -> Дикий запад -> Абстракция
+Босс (QR-код)
+
+// ---------------------------------------------------
+
+6. Организм (lс = 190 || m = 120)
+
+6.1. Нога -> Туловище -> Голова
+6.2. Рот -> Лёгкие -> Сердце
+6.3. Желудок -> Кишечник -> Желудок
+Босс (Деталь Lego)
+
+// ---------------------------------------------------
+
+7. (lс = 300 || m = 300)
+
+7.1.
+7.2.
+7.3.
+7.4.
+7.5.
+
+// ---------------------------------------------------
+
+8. Финал
+8.1.
+8.2.
+8.3. Бонус уровень: хорошая концовка 
+8.4.

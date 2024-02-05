@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bv3511ys2uvwl"]
+
+[node name="hub_location" type="Node2D"]
